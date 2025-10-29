@@ -1,0 +1,104 @@
+{
+    "info": {
+      "_postman_id": "9b8b0a5f-3d6d-4e92-b8a9-6d6eac3a02fa",
+      "name": "CRUD Livros API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "_exporter_id": "chatgpt"
+    },
+    "item": [
+      {
+        "name": "Criar Livro (POST)",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"titulo\": \"Dom Casmurro\",\n    \"autor\": \"Machado de Assis\",\n    \"editora\": \"Editora Exemplo\",\n    \"ano\": 1899,\n    \"preco\": 39.90\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/livros",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["livros"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Listar Todos os Livros (GET)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/livros",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["livros"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Buscar Livro por ID (GET)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/livros/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["livros", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Atualizar Livro (PUT)",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"preco\": 49.90\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/livros/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["livros", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Excluir Livro (DELETE)",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/livros/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["livros", ":id"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
